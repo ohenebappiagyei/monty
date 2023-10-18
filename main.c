@@ -30,6 +30,11 @@ int main(int argc, char *argv[])
         int value;
 
         line_number++;
+
+	/* Skip empty lines or comments */
+	if (strlen(line) == 0 || line[0] == '#' || line[0] == '\n')
+		continue;
+
         opcode = strtok(line, " \t\n");
         if (opcode == NULL)
             continue;
