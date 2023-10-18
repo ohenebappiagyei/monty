@@ -96,6 +96,10 @@ int main(int argc, char *argv[])
 	{
 		pchar(&stack, line_number);
 	}
+	else if (strcmp(opcode, "pstr") == 0)
+	{
+		pstr(&stack);
+	}
         else
         {
             fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
