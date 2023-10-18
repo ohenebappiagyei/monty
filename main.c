@@ -100,6 +100,10 @@ int main(int argc, char *argv[])
 	{
 		pstr(&stack);
 	}
+	else if (strcmp(opcode, "rotl") == 0)
+	{
+		rotl(&stack);
+	}
         else
         {
             fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
